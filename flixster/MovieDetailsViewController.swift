@@ -29,12 +29,15 @@ class MovieDetailsViewController: UIViewController {
         let posterPath = movie["poster_path"] as! String
         let posterUrl = URL(string: posterBaseUrl + posterPath)!
         posterView.af_setImage(withURL: posterUrl)
+        posterView.layer.borderWidth = 1.5
+        posterView.layer.borderColor = UIColor.white.cgColor
         
         let backdropBaseUrl = "https://image.tmdb.org/t/p/w780"
         let backdropPath = movie["backdrop_path"] as! String
         let backdropUrl = URL(string: backdropBaseUrl + backdropPath)!
         backdropView.af_setImage(withURL: backdropUrl)
-        
+       
+
         
         
         // Do any additional setup after loading the view.
